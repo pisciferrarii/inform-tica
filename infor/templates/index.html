@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Hotel</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<h1>Reservas del Hotel</h1>
+<div class="contenedor">
+{% for h in habitaciones %}
+  <div class="card">
+    <img src="{{ h['imagen_url'] }}">
+    <h2>{{ h['nombre'] }}</h2>
+    <p>Precio: {{ h['precio'] }}</p>
+  </div>
+{% endfor %}
+</div>
+
+<h2>Listado de Reservas</h2>
+<table>
+<tr><th>Cliente</th><th>Habitación</th><th>Fecha</th></tr>
+{% for r in reservas %}
+<tr>
+  <td>{{ r['cliente'] }}</td>
+  <td>{{ r['habitacion_id'] }}</td>
+  <td>{{ r['fecha'] }}</td>
+</tr>
+{% endfor %}
+</table>
+
+</body>
+</html>

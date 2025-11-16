@@ -1,0 +1,6 @@
+body { font-family: Arial; padding:20px; }
+.contenedor { display:flex; gap:20px; }
+.card { border:1px solid #ccc; padding:10px; width:200px; }
+.card img { width:100%; }
+table { border-collapse:collapse; width:400px; margin-top:20px; }
+td,th { border:1px solid #000; padding:5px; }
